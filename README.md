@@ -34,6 +34,34 @@ Just talk to Claude:
 - "Add a safari activity on day 3 of the Tanzania trip"
 - "Add a $50 expense for dinner"
 
+## Alternative: run from a local copy
+
+Prefer not to fetch from GitHub on each start (or want to hack on the code)? Clone the repo and point Claude at it:
+
+```bash
+git clone https://github.com/YoniRomm/tripable-mcp
+cd tripable-mcp
+npm install
+```
+
+Then use this config instead of the `npx` one (replace the path with where you cloned it):
+
+```json
+{
+  "mcpServers": {
+    "tripable": {
+      "command": "node",
+      "args": ["/absolute/path/to/tripable-mcp/dist/index.js"],
+      "env": {
+        "MCP_TOKEN": "PASTE_YOUR_TOKEN_HERE"
+      }
+    }
+  }
+}
+```
+
+To update later: `git pull && npm install`.
+
 ## Available tools
 
 | Area | Tools |
@@ -62,3 +90,11 @@ MCP_TOKEN=... npm start
 1. באתר [Tripable](https://tripableai.com/profile): **Profile ← AI Assistant (MCP) Keys ← Generate New Key** והעתק את הטוקן.
 2. ב-Claude Desktop: **Settings ← Developer ← Edit Config**, הדבק את ה-JSON שלמעלה עם הטוקן שלך (נדרש Node.js 18+).
 3. סגור את Claude Desktop לגמרי ופתח מחדש. עכשיו אפשר לבקש ממנו לנהל את הטיולים שלך.
+
+### הרצה מעותק מקומי (בלי npx)
+```bash
+git clone https://github.com/YoniRomm/tripable-mcp
+cd tripable-mcp
+npm install
+```
+ואז בקונפיג של Claude Desktop השתמש ב-`"command": "node"` ו-`"args": ["/הנתיב/המלא/tripable-mcp/dist/index.js"]` במקום `npx`, עם אותו `MCP_TOKEN`. לעדכון: `git pull && npm install`.
