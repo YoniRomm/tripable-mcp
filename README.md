@@ -1,13 +1,13 @@
 # Tripable MCP
 
-Connect Claude (or any MCP-compatible AI assistant) to your Tripable trips. Ask it to list your trips, add activities, expenses, todos, packing items and more — in plain language.
+Connect Claude (or any MCP-compatible AI assistant) to your [Tripable](https://tripableai.com) trips. Ask it to list your trips, add activities, expenses, todos, packing items and more — in plain language.
 
 ## Quick start
 
 **Requirements:** [Node.js 18+](https://nodejs.org/)
 
 ### 1. Get your token
-In the Tripable web app: **Profile → AI Assistant (MCP) Keys → Generate New Key**, then copy the token.
+Log in to the [Tripable web app](https://tripableai.com/profile) and go to your profile: **Profile → AI Assistant (MCP) Keys → Generate New Key**, then copy the token.
 
 ### 2. Add it to Claude Desktop
 Open **Claude Desktop → Settings → Developer → Edit Config** and add:
@@ -59,6 +59,6 @@ MCP_TOKEN=... npm start
 
 ## עברית
 
-1. באתר Tripable: **Profile ← AI Assistant (MCP) Keys ← Generate New Key** והעתק את הטוקן.
+1. באתר [Tripable](https://tripableai.com/profile): **Profile ← AI Assistant (MCP) Keys ← Generate New Key** והעתק את הטוקן.
 2. ב-Claude Desktop: **Settings ← Developer ← Edit Config**, הדבק את ה-JSON שלמעלה עם הטוקן שלך (נדרש Node.js 18+).
 3. סגור את Claude Desktop לגמרי ופתח מחדש. עכשיו אפשר לבקש ממנו לנהל את הטיולים שלך.
